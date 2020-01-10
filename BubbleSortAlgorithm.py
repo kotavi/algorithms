@@ -13,9 +13,10 @@ def bubble_sort_in_descending_order(array):
     while threshold > 0:
         for i in range(0, threshold):
             if array[i] > array[i + 1]:
-                temp = array[i]
-                array[i] = array[i + 1]
-                array[i + 1] = temp
+                array[i], array[i + 1] = array[i + 1], array[i]
+                # temp = array[i]
+                # array[i] = array[i + 1]
+                # array[i + 1] = temp
         threshold -= 1
     return array
 
